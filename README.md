@@ -4,7 +4,7 @@
 
 **<summary>Application Images</summary>**
 
-<img src="resForReadme/mobile.gif">
+<img src="resForReadme/mobile_image.gif">
 
 </details>
 
