@@ -185,14 +185,14 @@ public class Intro extends AppCompatActivity {
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shareInterpolator="false"
-    android:startOffset="2500">
+    android:shareInterpolator="false">
 
 
     <alpha
         android:duration="2500"
         android:fromAlpha="0.0"
         android:toAlpha="1.0" />
+
 
 </set>
 ```
@@ -210,7 +210,8 @@ public class Intro extends AppCompatActivity {
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shareInterpolator="false">
+    android:shareInterpolator="false"
+    android:startOffset="2500">
 
 
     <alpha
