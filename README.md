@@ -59,42 +59,25 @@ public class Intro extends AppCompatActivity {
         Animation fade1 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         logo1.startAnimation(fade1);
 
-        fade1.setAnimationListener(new Animation.AnimationListener() {
+        TextView logo2 = findViewById(R.id.TextViewBottomTitle);
+        Animation fade2 = AnimationUtils.loadAnimation(Intro.this, R.anim.fade_in2);
+        logo2.startAnimation(fade2);
+
+        fade2.setAnimationListener(new Animation.AnimationListener() {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                TextView logo2 = findViewById(R.id.TextViewBottomTitle);
-                Animation fade2 = AnimationUtils.loadAnimation(Intro.this, R.anim.fade_in2);
-                logo2.startAnimation(fade2);
-
-                fade2.setAnimationListener(new Animation.AnimationListener() {
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        startActivity(new Intent(Intro.this, MainActivity.class));
-                        Intro.this.finish();
-                    }
-
-
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-                    }
-                });
+                startActivity(new Intent(Intro.this, MainActivity.class));
+                Intro.this.finish();
             }
 
 
             @Override
             public void onAnimationStart(Animation animation) {
-
             }
 
             @Override
             public void onAnimationRepeat(Animation animation) {
-
             }
         });
 
@@ -202,14 +185,14 @@ public class Intro extends AppCompatActivity {
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shareInterpolator="false">
+    android:shareInterpolator="false"
+    android:startOffset="2500">
 
 
     <alpha
         android:duration="2500"
         android:fromAlpha="0.0"
         android:toAlpha="1.0" />
-
 
 </set>
 ```
